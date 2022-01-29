@@ -43,11 +43,74 @@
     }
     .card{
       background-color: hsl(0, 0%, 100%);
-      border: 1px solid black;
-      width: 600px;
+      /* width: 600px; */
       border-radius: 5px;
       margin: 20px 0;
+      box-shadow: 0 15px 23px #ccd6df;
+      padding: 30px 40px;
     }
+    .budgetCost{
+      display: flex;
+      justify-content: space-between;
+    }
+    .budgetSlider{
+      width: 100%;
+      margin: 30px 0;
+    }
+    input[type="range"]{
+      -webkit-appearance: none;
+      height: 15px;
+    }
+    input[type="range"]::-webkit-slider-thumb{
+      -webkit-appearance: none;
+      background-color: hsl(174, 86%, 45%);
+      width: 30px;
+      height: 30px;
+      margin-top: -10px;
+      border-radius: 20px;
+      background-image: url('/images/icon-slider.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 15px 10px;
+      box-shadow: 0 5px 15px hsl(174, 86%, 45%);
+    }
+    input[type="range"]::-webkit-slider-runnable-track{
+      -webkit-appearance: none;
+      background-color: hsl(174, 77%, 80%);
+      border-radius: 15px;
+      border: none;
+      height: 7px;
+    }
+    input[type="range"]::-moz-range-thumb{
+      -webkit-appearance: none;
+      background-color: hsl(174, 86%, 45%);
+      height: 30px;
+      width: 30px;
+      border-radius: 20px;
+      background-image: url('/images/icon-slider.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 15px 10px;
+      border-width: 0px;
+      box-shadow: 0 5px 15px hsl(174, 86%, 45%);
+    }
+    input[type="range"]::-moz-range-track{
+      -webkit-appearance: none;
+      background-color: hsl(174, 77%, 80%);
+      border-radius: 15px;
+      height: 7px;
+    }
+    
+    /* input[type=range]:focus::-moz-range-track{
+      background-color: hsl(174, 86%, 45%);
+      border-radius: 15px;
+      height: 6px;
+    }
+    input[type=range]:focus::-moz-range-progress{
+      background-color: hsl(224, 65%, 95%);
+      border-radius: 15px;
+      height: 6px;
+    } */
   </style>
 </head>
 <body>
@@ -60,18 +123,35 @@
     </div>
   </div>
   <div class="card">
-    Pageviews
-    $ /month
-  
-    Monthly Billing
-    Yearly Billing 25% discount
-  
-    Unlimited websites
-    100% data ownership
-    Email reports
-  
-    Start my trial
+
+    <div class="budgetCost">
+      <span id="pageViews"></span>Pageviews
+      <span>
+        <label for="budget">$ /month</label>
+      </span>  
+    </div>
+
+    <input class="budgetSlider" name="budget" type="range" min="0" max="32" value="16" />
+    
+    <div class="monthlyYearlyToggle">
+      Monthly Billing
+      Yearly Billing 25% discount
+    </div>
+    
+    <div class="featuresStartBtn">
+      <div class="features">
+        <li>Unlimited websites</li>
+        <li>100% data ownership</li>
+        <li>Email reports</li>
+      </div>
+      <div class="">
+        <button>Start my trial</button>
+      </div>
+    </div>
   </div>
+  <script>
+
+  </script>
   
   <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
