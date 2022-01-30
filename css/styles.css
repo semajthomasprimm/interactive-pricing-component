@@ -27,6 +27,7 @@ body {
   background-repeat: no-repeat;
   align-items: center;
   padding: 50px 0;
+  color: hsl(227, 35%, 25%);
 }
 .cta-header {
   font-size: 29px;
@@ -34,19 +35,21 @@ body {
 }
 .cta-details {
   font-size: 15px;
+  color: hsl(225, 20%, 60%);
+  margin-top: 15px;
 }
 .card {
   background-color: hsl(0, 0%, 100%);
   width: 600px;
   border-radius: 5px;
   box-shadow: 0 15px 23px #ccd6df;
-  /* padding: 30px 40px; */
+  margin-top: 40px;
 }
 .budgetCost {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 40px;
+  padding: 55px 40px 25px;
 }
 
 .budgetSlider {
