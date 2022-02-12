@@ -32,7 +32,7 @@
       </div>  
     </div>
 
-    <input class="budgetSlider" name="budget" type="range" min="0" max="32" value="16" />
+    <input id="budgetSlider" class="budgetSlider" name="budget" type="range" min="0.00" max="32.00" value="16.00" />
     
     <div class="monthlyYearlyToggle">
       <span>Monthly Billing
@@ -56,7 +56,18 @@
 
   </div>
   <script>
-    
+    window.onload = function(){
+
+      let slider = document.getElementById("budgetSlider");
+      let cost = document.getElementById("cost");
+      cost.innerHTML = "$" + slider.value + ".00";
+
+      // event listener for slider, updates prices
+      slider.addEventListener('input', ()=>{
+        cost.innerHTML = "$" + slider.value + ".00";
+      });
+      
+    }
   </script>
   
   <!-- <div class="attribution">
